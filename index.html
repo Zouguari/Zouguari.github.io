@@ -5,28 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Yassine Zouguari · Développeur ERP SAP & Odoo</title>
 <meta name="description" content="Portfolio de Yassine Zouguari, élève ingénieur MGSI, développeur ERP SAP et Odoo avec IA appliquée. Disponible pour un stage PFE de 6 mois à partir de janvier 2027.">
+<meta property="og:title" content="Yassine Zouguari · Développeur ERP SAP & Odoo">
+<meta property="og:description" content="Élève ingénieur MGSI, développeur ERP SAP & Odoo et IA appliquée. Disponible pour un stage PFE à partir de janvier 2027.">
+<meta property="og:image" content="https://zouguari.github.io/images/yassine-zouguari.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F5F7FB;
-  --surface:#FFFFFF;
-  --ink:#141B2D;
-  --muted:#5A6378;
-  --line:#DCE1EB;
-  --sap:#2443B5;
-  --sap-soft:#E6EBFA;
-  --odoo:#7A3E8F;
-  --odoo-soft:#F2E8F5;
-  --accent:var(--sap);
-  --accent-soft:var(--sap-soft);
-  --font-display:"Space Grotesk", "Segoe UI", system-ui, sans-serif;
-  --font-body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
-  --font-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  --radius-lg:14px;
-  --radius-sm:6px;
-  --wrap:1120px;
+  --bg:#F5F7FB; --surface:#FFFFFF; --ink:#141B2D; --muted:#5A6378; --line:#DCE1EB;
+  --sap:#2443B5; --sap-soft:#E6EBFA; --odoo:#7A3E8F; --odoo-soft:#F2E8F5; --ok:#1F9D63;
+  --accent:var(--sap); --accent-soft:var(--sap-soft);
+  --shadow:0 1px 2px rgba(20,27,45,.06),0 8px 24px rgba(20,27,45,.06);
+  --font-display:"Space Grotesk","Segoe UI",system-ui,sans-serif;
+  --font-body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --radius-lg:16px; --radius-sm:7px; --wrap:1160px;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
@@ -35,48 +29,49 @@
   :root:not([data-theme="light"]){
     --bg:#0E1322; --surface:#161D31; --ink:#E8EBF4; --muted:#A1A9BD; --line:#2A3350;
     --sap:#8EA2FF; --sap-soft:#1E2850; --odoo:#CF95E2; --odoo-soft:#33213D;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
   }
 }
 :root[data-theme="dark"]{
   --bg:#0E1322; --surface:#161D31; --ink:#E8EBF4; --muted:#A1A9BD; --line:#2A3350;
   --sap:#8EA2FF; --sap-soft:#1E2850; --odoo:#CF95E2; --odoo-soft:#33213D;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
 }
 *,*::before,*::after{box-sizing:inherit}
-html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
 body[data-eco="odoo"]{--accent:var(--odoo);--accent-soft:var(--odoo-soft)}
-img,svg{max-width:100%}
+img,svg{max-width:100%;display:block}
 a{color:var(--accent);text-underline-offset:3px}
 a:hover{text-decoration-thickness:2px}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
 h1,h2,h3{font-family:var(--font-display);line-height:1.15;margin:0;letter-spacing:-0.01em}
 p{margin:0 0 1em}
+.kicker{display:block;font:500 .8rem var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
 
-/* Header */
-.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:24px;height:64px}
-.brand{font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--ink);text-decoration:none;white-space:nowrap}
-.brand span{color:var(--sap)}
-.brand span+span{color:var(--odoo)}
-.nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:1.02rem;color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand img{width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:50% 20%;border:1.5px solid var(--line);background:#fff}
+.nav{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
 .nav::-webkit-scrollbar{display:none}
-.nav a{color:var(--muted);text-decoration:none;font-size:.94rem;padding:6px 10px;border-radius:var(--radius-sm);white-space:nowrap}
-.nav a:hover{color:var(--ink);background:var(--surface)}
-.theme-btn{flex:none;font:500 .88rem var(--font-body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer}
+.nav a{color:var(--muted);text-decoration:none;font-size:.93rem;padding:6px 10px;border-radius:var(--radius-sm);white-space:nowrap}
+.nav a:hover,.nav a.on{color:var(--ink);background:var(--surface)}
+.theme-btn{flex:none;font:500 .86rem var(--font-body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer}
 .theme-btn:hover{border-color:var(--muted)}
 
-/* Hero */
-.hero{padding:88px 0 56px}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-.status{display:inline-flex;align-items:center;gap:10px;font-size:.92rem;color:var(--ink);background:var(--surface);border:1px solid var(--line);padding:6px 14px 6px 10px;border-radius:999px;margin-bottom:28px}
-.status i{width:9px;height:9px;border-radius:50%;background:#1F9D63;box-shadow:0 0 0 4px color-mix(in srgb,#1F9D63 22%,transparent)}
+.hero{padding:80px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:.92rem;background:var(--surface);border:1px solid var(--line);padding:6px 14px 6px 10px;border-radius:999px;margin-bottom:26px}
+.status i{flex:none;width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 22%,transparent)}
 .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:700;letter-spacing:-0.025em}
-.role{font-family:var(--font-display);font-weight:500;font-size:clamp(1.1rem,2.2vw,1.35rem);color:var(--muted);margin:14px 0 24px;max-width:36ch}
-.pitch{font-size:1.15rem;max-width:52ch;margin-bottom:12px}
-.where{color:var(--muted);font-size:.96rem;margin-bottom:32px}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
-.btn{display:inline-flex;align-items:center;justify-content:center;font:600 .98rem var(--font-body);text-decoration:none;padding:12px 22px;border-radius:var(--radius-sm);border:1.5px solid transparent;transition:background .15s,border-color .15s,color .15s}
+.role{font-family:var(--font-display);font-weight:500;font-size:clamp(1.1rem,2.2vw,1.35rem);color:var(--muted);margin:14px 0 22px;max-width:40ch}
+.role b{font-weight:600} .role .s{color:var(--sap)} .role .o{color:var(--odoo)}
+.pitch{font-size:1.15rem;max-width:52ch;margin-bottom:10px}
+.where{color:var(--muted);font-size:.96rem;margin-bottom:30px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 .98rem var(--font-body);text-decoration:none;padding:12px 22px;border-radius:var(--radius-sm);border:1.5px solid transparent;transition:background .15s,border-color .15s,color .15s}
 .btn-primary{background:var(--sap);color:#fff}
 :root[data-theme="dark"] .btn-primary{color:#0E1322}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn-primary{color:#0E1322}}
@@ -87,76 +82,93 @@ p{margin:0 0 1em}
 .links a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
 .links a:hover{color:var(--ink);border-color:var(--ink)}
 
-/* Hero diagram: the signature element */
-.flow{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px 24px 22px}
-.flow svg{display:block;width:100%;height:auto}
-.flow .node rect{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
-.flow .node text{fill:var(--ink);font-family:var(--font-display);font-weight:600;font-size:15px}
-.flow .node .sub{fill:var(--muted);font-family:var(--font-body);font-weight:400;font-size:12px}
-.flow .sap rect{fill:var(--sap-soft);stroke:var(--sap)}
-.flow .sap text{fill:var(--sap)}
-.flow .odoo rect{fill:var(--odoo-soft);stroke:var(--odoo)}
-.flow .odoo text{fill:var(--odoo)}
-.flow .sap .sub,.flow .odoo .sub{fill:var(--ink);opacity:.75}
-.flow .path{fill:none;stroke-width:2;stroke-linecap:round}
-.flow .p-sap{stroke:var(--sap)}
-.flow .p-odoo{stroke:var(--odoo)}
-.flow .p-n{stroke:var(--muted)}
-.flow .ai circle{fill:var(--surface);stroke:var(--ink);stroke-width:1.5}
-.flow .ai text{fill:var(--ink);font:600 11px var(--font-display)}
-.flow figcaption{font-size:.88rem;color:var(--muted);margin-top:14px;text-align:center}
-.flow .dash{stroke-dasharray:6 7;animation:flow 1.6s linear infinite}
-@keyframes flow{to{stroke-dashoffset:-26}}
+.portrait{position:relative;justify-self:center;width:100%;max-width:340px}
+.portrait .frame{position:relative;border-radius:var(--radius-lg);overflow:hidden;background:#fff;aspect-ratio:4/5;box-shadow:var(--shadow)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
 
-/* Facts */
-.facts{padding:8px 0 24px}
+.facts{padding:8px 0 16px}
 .facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .facts li{padding:22px 20px;border-left:1px solid var(--line)}
 .facts li:first-child{border-left:0;padding-left:0}
 .facts strong{display:block;font-family:var(--font-display);font-size:1.15rem;font-weight:600;line-height:1.25;margin-bottom:6px}
-.facts li.f-sap strong{color:var(--sap)}
-.facts li.f-odoo strong{color:var(--odoo)}
+.facts li.f-sap strong{color:var(--sap)} .facts li.f-odoo strong{color:var(--odoo)}
 .facts span{display:block;color:var(--muted);font-size:.93rem;line-height:1.5}
 
-/* Sections */
-section.block{padding:88px 0 24px}
+section.block{padding:96px 0 16px}
 .head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px;margin-bottom:36px}
-.head h2{font-size:clamp(1.8rem,3.4vw,2.4rem)}
-.head p{color:var(--muted);margin:8px 0 0;max-width:60ch}
+.head h2{font-size:clamp(1.8rem,3.4vw,2.5rem)}
+.head p{color:var(--muted);margin:10px 0 0;max-width:60ch}
 
-/* About */
-.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
-.about .lead{font-family:var(--font-display);font-size:1.45rem;line-height:1.35;font-weight:500}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.about h2{font-size:clamp(1.7rem,3.2vw,2.3rem)}
 .about .text p{max-width:64ch}
+.flow{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px 22px 18px;margin:24px 0 0}
+.flow svg{width:100%;height:auto}
+.flow .node rect{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.flow .node text{fill:var(--ink);font-family:var(--font-display);font-weight:600;font-size:15px}
+.flow .node .sub{fill:var(--muted);font-family:var(--font-body);font-weight:400;font-size:12px}
+.flow .sap rect{fill:var(--sap-soft);stroke:var(--sap)} .flow .sap text{fill:var(--sap)}
+.flow .odoo rect{fill:var(--odoo-soft);stroke:var(--odoo)} .flow .odoo text{fill:var(--odoo)}
+.flow .sap .sub,.flow .odoo .sub{fill:var(--ink);opacity:.75}
+.flow .path{fill:none;stroke-width:2;stroke-linecap:round}
+.flow .p-sap{stroke:var(--sap)} .flow .p-odoo{stroke:var(--odoo)} .flow .p-n{stroke:var(--muted)}
+.flow .ai circle{fill:var(--surface);stroke:var(--ink);stroke-width:1.5}
+.flow .ai text{fill:var(--ink);font:600 11px var(--font-display)}
+.flow figcaption{font-size:.88rem;color:var(--muted);margin-top:12px;text-align:center}
+.flow .dash{stroke-dasharray:6 7;animation:flow 1.6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-26}}
 
-/* Filter */
 .filter{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px}
-.filter button{font:500 .95rem var(--font-body);color:var(--muted);background:none;border:0;border-radius:999px;padding:8px 18px;cursor:pointer;transition:background .2s,color .2s}
+.filter button{font:500 .95rem var(--font-body);color:var(--muted);background:none;border:0;border-radius:999px;padding:8px 16px;cursor:pointer;transition:background .2s,color .2s}
 .filter button:hover{color:var(--ink)}
 .filter button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 .filter button[data-f="sap"][aria-pressed="true"]{background:var(--sap);color:var(--surface)}
 .filter button[data-f="odoo"][aria-pressed="true"]{background:var(--odoo);color:var(--surface)}
+.filter small{font:500 .76rem var(--font-mono);opacity:.7;margin-left:6px}
 
-/* Projects */
-.projects{display:flex;flex-direction:column}
-.project{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;padding:40px 0;border-top:1px solid var(--line)}
-.project:last-child{border-bottom:1px solid var(--line)}
-.project[hidden]{display:none}
-.eco{display:inline-block;font:600 .8rem var(--font-body);padding:3px 10px;border-radius:999px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;transition:transform .2s,box-shadow .2s,opacity .6s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card[hidden]{display:none}
+.card.featured{grid-column:1/-1}
+.card.featured .shot{aspect-ratio:1400/450}
+.card.featured .body{padding:30px 32px 26px}
+.card.featured .body>*:not(.stack):not(.foot){max-width:78ch}
+.card.featured h3{font-size:1.7rem}
+@media (max-width:640px){.card.featured .shot{aspect-ratio:16/9}}
+
+.shot{position:relative;display:block;aspect-ratio:16/9;background:#fff;border-bottom:1px solid var(--line);overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:left top;transition:transform .45s}
+.card:hover .shot img{transform:scale(1.04)}
+.shot .zoom{position:absolute;right:12px;bottom:12px;font:500 .78rem var(--font-body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px 10px;opacity:0;transition:opacity .2s}
+.shot:hover .zoom,.shot:focus-visible .zoom{opacity:1}
+.body{display:flex;flex-direction:column;flex:1;padding:24px 24px 22px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.eco{display:inline-block;font:600 .78rem var(--font-body);padding:3px 10px;border-radius:999px}
 .eco.sap{color:var(--sap);background:var(--sap-soft)}
 .eco.odoo{color:var(--odoo);background:var(--odoo-soft)}
-.project h3{font-size:1.55rem;margin-bottom:10px}
-.project .tag{color:var(--muted);font-size:1rem;margin-bottom:20px;max-width:40ch}
-.project .repo{display:flex;flex-direction:column;gap:6px;font-size:.95rem}
-.project dl{margin:0}
-.project dt{font-family:var(--font-display);font-weight:600;font-size:.98rem;margin-bottom:4px}
-.project dd{margin:0 0 18px;max-width:66ch}
-.project dd:last-of-type{margin-bottom:20px}
+.eco.client{color:var(--ok);background:color-mix(in srgb,var(--ok) 14%,transparent)}
+.card h3{font-size:1.4rem;margin-bottom:8px}
+.card .tag{color:var(--muted);margin-bottom:16px}
+.highlight{border-left:3px solid var(--sap);padding:2px 0 2px 14px;margin:0 0 18px;font-size:.98rem}
+.card[data-eco="odoo"] .highlight{border-color:var(--odoo)}
+details{margin:0 0 18px;border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:12px 0 0;font-weight:600;font-size:.95rem;color:var(--ink);display:flex;align-items:center;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";flex:none;display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;border:1px solid var(--line);font-weight:500;line-height:1}
+details[open] summary::before{content:"−"}
+summary:hover{color:var(--accent)}
+details dl{margin:14px 0 0}
+details dt{font-family:var(--font-display);font-weight:600;font-size:.95rem;margin-bottom:3px}
+details dd{margin:0 0 14px;font-size:.97rem}
 .stack{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
-.stack li{font:400 .8rem var(--font-mono);color:var(--ink);background:var(--surface);border:1px solid var(--line);padding:3px 9px;border-radius:var(--radius-sm)}
-code{font-family:var(--font-mono);font-size:.88em;background:var(--accent-soft);padding:1px 5px;border-radius:4px}
+.stack li{font:400 .78rem var(--font-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);padding:3px 9px;border-radius:var(--radius-sm)}
+.card .foot{margin-top:auto;padding-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.94rem;font-weight:500}
+.card .foot a{text-decoration:none}
+.card .foot a:hover{text-decoration:underline}
+.private{color:var(--muted);font-weight:400}
+code{font-family:var(--font-mono);font-size:.86em;background:var(--accent-soft);padding:1px 5px;border-radius:4px}
 
-/* Timeline */
 .timeline{list-style:none;margin:0;padding:0;position:relative}
 .timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--line)}
 .timeline>li{position:relative;padding:0 0 44px 44px}
@@ -166,77 +178,86 @@ code{font-family:var(--font-mono);font-size:.88em;background:var(--accent-soft);
 .timeline h3{font-size:1.3rem}
 .timeline .org{font-weight:600;color:var(--ink)}
 .timeline .when{color:var(--muted);font-size:.95rem;margin:4px 0 12px}
-.timeline .sum{max-width:66ch}
-.timeline ul.points{margin:0 0 14px;padding-left:20px;max-width:66ch}
+.timeline .sum{max-width:68ch}
+.timeline ul.points{margin:0 0 14px;padding-left:20px;max-width:68ch}
 .timeline ul.points li{margin-bottom:6px}
 
-/* Skills */
 .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
 .skill{padding:22px 0;border-top:1px solid var(--line)}
 .skill h3{font-size:1.1rem;margin-bottom:10px}
 .skill.wide{grid-column:1/-1}
-.skill .stack li{font-family:var(--font-body);font-size:.88rem}
-.skill.sap h3{color:var(--sap)}
-.skill.odoo h3{color:var(--odoo)}
+.skill .stack li{font-family:var(--font-body);font-size:.88rem;background:var(--surface)}
+.skill.sap h3{color:var(--sap)} .skill.odoo h3{color:var(--odoo)}
 
-/* Certs */
 .certs{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.cert{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px}
+.cert{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px;color:inherit;text-decoration:none}
 .cert.sap{border-top:4px solid var(--sap)}
 .cert.other{border-top:4px solid var(--line)}
 .cert .issuer{color:var(--muted);font-size:.9rem;margin-bottom:6px}
 .cert h3{font-size:1.15rem;margin-bottom:8px}
 .cert p{color:var(--muted);font-size:.95rem;margin:0}
-a.cert{display:block;color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
-a.cert:hover{border-color:var(--muted);transform:translateY(-2px)}
+a.cert{transition:transform .15s,box-shadow .15s,opacity .6s}
+a.cert:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 a.cert .verify{display:inline-block;margin-top:14px;font-weight:600;font-size:.92rem;color:var(--accent)}
 
-/* Education */
-.edu{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.edu{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .edu article{padding:24px 0;border-top:2px solid var(--ink)}
 .edu h3{font-size:1.2rem;margin-bottom:6px}
 .edu .when{color:var(--muted);font-size:.95rem;margin-bottom:10px}
 
-/* Contact */
-.contact{margin:96px 0 0;padding:80px 0;background:var(--ink);color:var(--bg)}
-.contact h2{font-size:clamp(1.9rem,4vw,2.8rem);max-width:22ch;margin-bottom:18px}
-.contact p{color:color-mix(in srgb,var(--bg) 78%,transparent);max-width:56ch;font-size:1.1rem}
-.contact .channels{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0 28px}
+.contact{margin:104px 0 0;padding:84px 0;background:var(--ink);color:var(--bg)}
+.contact .wrap{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.contact .avatar{width:120px;height:120px;border-radius:50%;overflow:hidden;border:3px solid color-mix(in srgb,var(--bg) 30%,transparent);background:#fff}
+.contact .avatar img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.contact h2{font-size:clamp(1.9rem,4vw,2.7rem);max-width:24ch;margin-bottom:16px}
+.contact p{color:color-mix(in srgb,var(--bg) 78%,transparent);max-width:58ch;font-size:1.08rem}
+.contact .channels{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 22px}
 .contact .channels a{color:var(--bg);text-decoration:none;border:1.5px solid color-mix(in srgb,var(--bg) 35%,transparent);padding:12px 20px;border-radius:var(--radius-sm);font-weight:500}
 .contact .channels a:hover{border-color:var(--bg)}
 .contact .channels a.mail{background:var(--bg);color:var(--ink);border-color:var(--bg)}
 footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);font-size:.88rem;padding:0 0 32px}
 
-/* Responsive */
-@media (max-width:900px){
-  .hero{padding:56px 0 40px}
-  .hero .wrap,.about,.project{grid-template-columns:1fr;gap:28px}
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .hero{padding:48px 0 40px}
+  .hero .wrap{grid-template-columns:1fr;gap:48px}
+  .portrait{max-width:300px;order:-1}
+  .about{grid-template-columns:1fr;gap:28px}
+  .grid{grid-template-columns:1fr}
   .facts ul{grid-template-columns:repeat(2,1fr)}
   .facts li:nth-child(3){border-left:0;padding-left:0}
   .facts li:nth-child(n+3){border-top:1px solid var(--line)}
-  section.block{padding:64px 0 16px}
+  section.block{padding:72px 0 12px}
 }
 @media (max-width:640px){
-  .wrap{padding:0 18px}
-  .top .wrap{gap:12px}
-  .brand{display:none}
+  .wrap{padding:0 16px}
+  .top .wrap{gap:10px}
+  .brand span{display:none}
   .nav{margin-left:0}
+  .portrait{max-width:240px}
   .skills,.certs,.edu{grid-template-columns:1fr}
-  .facts li{padding:18px 14px}
-  .facts strong{font-size:1.05rem}
+  .facts li{padding:18px 12px}
+  .facts strong{font-size:1.02rem}
+  .body{padding:20px 18px 18px}
+  .contact .wrap{grid-template-columns:1fr;gap:24px}
+  .contact .avatar{width:88px;height:88px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .flow .dash{animation:none}
+  .js .reveal{opacity:1;transform:none}
   *{transition:none!important}
 }
 </style>
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body data-eco="all">
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top">Yassine <span>Zou</span><span>guari</span></a>
+    <a class="brand" href="#top"><img src="images/yassine-zouguari.webp" alt="" width="32" height="32"><span>Yassine Zouguari</span></a>
     <nav class="nav" aria-label="Sections">
       <a href="#projets">Projets</a>
       <a href="#experiences">Expériences</a>
@@ -245,7 +266,7 @@ footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);
       <a href="#formation">Formation</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="theme-btn" id="themeBtn" type="button" aria-label="Changer de thème">Mode sombre</button>
+    <button class="theme-btn" id="themeBtn" type="button">Mode sombre</button>
   </div>
 </header>
 
@@ -256,7 +277,7 @@ footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);
     <div>
       <div class="status"><i aria-hidden="true"></i>Disponible pour un stage PFE de 6 mois à partir de janvier 2027</div>
       <h1>Yassine Zouguari</h1>
-      <p class="role">Élève ingénieur en Management et Gouvernance des SI, développeur ERP SAP &amp; Odoo et IA appliquée</p>
+      <p class="role">Élève ingénieur en Management et Gouvernance des SI · Développeur ERP <b class="s">SAP</b> &amp; <b class="o">Odoo</b> · IA appliquée</p>
       <p class="pitch">J'analyse les besoins métier pour les transformer en solutions ERP concrètes, en combinant le développement SAP (ABAP, RAP, CAP), Odoo et l'intelligence artificielle.</p>
       <p class="where">Basé au Maroc, ouvert à la mobilité internationale</p>
       <div class="actions">
@@ -269,22 +290,9 @@ footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);
         <a href="mailto:yassine.zouguari.123@gmail.com">yassine.zouguari.123@gmail.com</a>
       </div>
     </div>
-
-    <figure class="flow" aria-label="Schéma : un besoin métier transformé en solution via SAP ou Odoo, avec l'IA">
-      <svg viewBox="0 0 420 300" role="img" aria-hidden="true">
-        <path class="path p-sap dash" d="M118 150 C160 150 160 70 196 70"/>
-        <path class="path p-odoo dash" d="M118 150 C160 150 160 230 196 230"/>
-        <path class="path p-sap" d="M312 70 C340 70 336 150 352 150"/>
-        <path class="path p-odoo" d="M312 230 C340 230 336 150 352 150"/>
-        <g class="node"><rect x="8" y="118" width="110" height="64" rx="10"/><text x="63" y="146" text-anchor="middle">Besoin</text><text class="sub" x="63" y="164" text-anchor="middle">métier du client</text></g>
-        <g class="node sap"><rect x="196" y="36" width="116" height="68" rx="10"/><text x="254" y="64" text-anchor="middle">SAP</text><text class="sub" x="254" y="83" text-anchor="middle">ABAP, RAP, CAP</text></g>
-        <g class="node odoo"><rect x="196" y="196" width="116" height="68" rx="10"/><text x="254" y="224" text-anchor="middle">Odoo</text><text class="sub" x="254" y="243" text-anchor="middle">modules, API</text></g>
-        <g class="ai"><circle cx="254" cy="150" r="22"/><text x="254" y="154" text-anchor="middle">IA</text></g>
-        <path class="path p-n" d="M254 104 V128 M254 172 V196"/>
-        <g class="node"><rect x="352" y="122" width="62" height="56" rx="10"/><text x="383" y="148" text-anchor="middle" style="font-size:13px">Solution</text><text class="sub" x="383" y="164" text-anchor="middle">livrée</text></g>
-      </svg>
-      <figcaption>Mon approche : partir du besoin, choisir le bon outil, livrer une solution qui fonctionne.</figcaption>
-    </figure>
+    <div class="portrait">
+      <div class="frame"><img src="images/yassine-zouguari.webp" alt="Portrait de Yassine Zouguari" width="620" height="775"></div>
+    </div>
   </div>
 </section>
 
@@ -293,7 +301,7 @@ footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);
     <ul>
       <li class="f-sap"><strong>SAP ABAP &amp; RAP</strong><span>Applications Fiori, intégration au standard S/4HANA, interfaces IDoc</span></li>
       <li class="f-sap"><strong>SAP CAP &amp; BTP</strong><span>Extensions cloud side-by-side connectées à S/4HANA</span></li>
-      <li class="f-odoo"><strong>Odoo 17</strong><span>Modules custom, paramétrage et automatisation des processus</span></li>
+      <li class="f-odoo"><strong>Odoo 17 &amp; 18</strong><span>Modules custom, paramétrage et projets client de bout en bout</span></li>
       <li><strong>IA appliquée</strong><span>LLM au service de cas métier concrets dans l'ERP</span></li>
     </ul>
   </div>
@@ -301,11 +309,26 @@ footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);
 
 <section class="block" id="a-propos">
   <div class="wrap about">
-    <div>
-      <h2 style="font-size:clamp(1.8rem,3.4vw,2.4rem);margin-bottom:20px">À propos</h2>
-      <p class="lead">Un profil à la frontière entre la technique et le métier.</p>
+    <div class="reveal">
+      <span class="kicker">À propos</span>
+      <h2>Un profil à la frontière entre la technique et le métier.</h2>
+      <figure class="flow" aria-label="Schéma : un besoin métier transformé en solution via SAP ou Odoo, avec l'IA">
+        <svg viewBox="0 0 420 300" role="img" aria-hidden="true">
+          <path class="path p-sap dash" d="M118 150 C160 150 160 70 196 70"/>
+          <path class="path p-odoo dash" d="M118 150 C160 150 160 230 196 230"/>
+          <path class="path p-sap" d="M312 70 C340 70 336 150 352 150"/>
+          <path class="path p-odoo" d="M312 230 C340 230 336 150 352 150"/>
+          <g class="node"><rect x="8" y="118" width="110" height="64" rx="10"/><text x="63" y="146" text-anchor="middle">Besoin</text><text class="sub" x="63" y="164" text-anchor="middle">métier du client</text></g>
+          <g class="node sap"><rect x="196" y="36" width="116" height="68" rx="10"/><text x="254" y="64" text-anchor="middle">SAP</text><text class="sub" x="254" y="83" text-anchor="middle">ABAP, RAP, CAP</text></g>
+          <g class="node odoo"><rect x="196" y="196" width="116" height="68" rx="10"/><text x="254" y="224" text-anchor="middle">Odoo</text><text class="sub" x="254" y="243" text-anchor="middle">modules, API</text></g>
+          <g class="ai"><circle cx="254" cy="150" r="22"/><text x="254" y="154" text-anchor="middle">IA</text></g>
+          <path class="path p-n" d="M254 104 V128 M254 172 V196"/>
+          <g class="node"><rect x="352" y="122" width="62" height="56" rx="10"/><text x="383" y="148" text-anchor="middle" style="font-size:13px">Solution</text><text class="sub" x="383" y="164" text-anchor="middle">livrée</text></g>
+        </svg>
+        <figcaption>Mon approche : partir du besoin, choisir le bon outil, livrer une solution qui fonctionne.</figcaption>
+      </figure>
     </div>
-    <div class="text">
+    <div class="text reveal">
       <p>Après un DUT en Génie Informatique à l'EST de Meknès, j'ai poursuivi en cycle ingénieur en Management et Gouvernance des Systèmes d'Information à l'ENSIASD Taroudant (Université Ibn Zohr), où je suis actuellement en 5e année. Cette double formation m'a donné un profil à la frontière entre la technique et le métier.</p>
       <p>Mes stages m'ont permis de passer de la théorie au terrain : chez LafargeHolcim, j'ai développé un système de présence par reconnaissance faciale, puis chez UrikaCloud, j'ai travaillé sur des solutions ERP intégrant l'IA autour d'Odoo, de l'automatisation de modules RH jusqu'à un tableau de bord d'analyse de KPI pour les dirigeants de PME.</p>
       <p>Aujourd'hui, je me spécialise dans le développement ERP sur SAP (ABAP, RAP, CAP) et Odoo, en m'appuyant sur mes compétences full stack Python et Java. Mon objectif : devenir consultant technique ERP, capable de comprendre un besoin client et de livrer la solution qui y répond.</p>
@@ -318,138 +341,180 @@ footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);
   <div class="wrap">
     <div class="head">
       <div>
+        <span class="kicker">Réalisations</span>
         <h2>Projets</h2>
-        <p>Six projets choisis pour montrer les deux écosystèmes que je maîtrise, du code ABAP aux extensions cloud et aux modules Odoo.</p>
+        <p>Sept projets choisis pour montrer les deux écosystèmes que je maîtrise, du code ABAP aux extensions cloud, jusqu'à un projet Odoo livré pour un client.</p>
       </div>
       <div class="filter" role="group" aria-label="Filtrer les projets">
-        <button type="button" data-f="all" aria-pressed="true">Tous</button>
-        <button type="button" data-f="sap" aria-pressed="false">SAP</button>
-        <button type="button" data-f="odoo" aria-pressed="false">Odoo</button>
+        <button type="button" data-f="all" aria-pressed="true">Tous<small>7</small></button>
+        <button type="button" data-f="sap" aria-pressed="false">SAP<small>3</small></button>
+        <button type="button" data-f="odoo" aria-pressed="false">Odoo<small>4</small></button>
       </div>
     </div>
 
-    <div class="projects">
+    <div class="grid">
 
-      <article class="project" data-eco="sap">
-        <div>
-          <span class="eco sap">SAP</span>
+      <article class="card featured reveal" data-eco="odoo">
+        <a class="shot" href="images/gestion-commerciale-odoo.webp" target="_blank" rel="noopener" aria-label="Agrandir la capture"><img src="images/gestion-commerciale-odoo.webp" alt="Tableau de bord OWL du cycle commercial : réception, entrée en stock, commande client, livraison et facture" loading="lazy" width="1400" height="450"><span class="zoom">Agrandir</span></a>
+        <div class="body">
+          <div class="tags"><span class="eco odoo">Odoo 18</span><span class="eco client">Projet client</span></div>
+          <h3>Gestion commerciale sur mesure</h3>
+          <p class="tag">Solution Odoo 18 Community pour un distributeur de matériaux de construction et de quincaillerie.</p>
+          <p class="highlight">Du bon de commande fournisseur à la facture client, validé par 25 tests unitaires et 47 vérifications automatisées.</p>
+          <details>
+            <summary>Problème, solution et contribution</summary>
+            <dl>
+              <dt>Le problème</dt>
+              <dd>Le client gérait ses achats, son stock et ses ventes avec une application personnalisée. Il avait besoin d'un ERP standard et évolutif, adapté à ses processus et utilisable en français comme en arabe.</dd>
+              <dt>La solution</dt>
+              <dd>Le standard Odoo paramétré pour tout le cycle commercial (achats, réceptions, stock par lot et péremption, ventes, livraisons, facturation, paiements), complété par des modules spécifiques uniquement pour les écarts : codification automatique des produits par catégorie, alertes de stock, pré-remplissage du dernier prix payé par client, 6 documents PDF personnalisés compatibles arabe et un tableau de bord OWL. Aucune modification du cœur d'Odoo, paramétrage versionné et reproductible, 100 % Community.</dd>
+              <dt>Ma contribution</dt>
+              <dd>Projet mené de bout en bout : analyse des processus existants, paramétrage du standard, développement des modules spécifiques, tests unitaires et fonctionnels, et documentation (guide utilisateur, recette, mise en production).</dd>
+            </dl>
+          </details>
+          <ul class="stack"><li>Odoo 18</li><li>Python</li><li>ORM</li><li>OWL</li><li>QWeb</li><li>PostgreSQL</li><li>Docker</li><li>OCA</li></ul>
+          <div class="foot"><span class="private">Code privé (projet client)</span></div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-eco="sap">
+        <a class="shot" href="images/purchase-request-me53n.webp" target="_blank" rel="noopener" aria-label="Agrandir la capture"><img src="images/purchase-request-me53n.webp" alt="Demande d'achat standard SAP créée automatiquement, affichée dans la transaction ME53N" loading="lazy" width="1280" height="458"><span class="zoom">Agrandir</span></a>
+        <div class="body">
+          <div class="tags"><span class="eco sap">SAP · RAP</span></div>
           <h3>Purchase Request &amp; Approval</h3>
           <p class="tag">Application Fiori de demande d'achat avec circuit d'approbation, intégrée au module MM de SAP S/4HANA.</p>
-          <div class="repo"><a href="https://github.com/Zouguari/sap-rap-purchase-requisition" target="_blank" rel="noopener">Voir le code sur GitHub</a></div>
-        </div>
-        <div>
-          <dl>
-            <dt>Le problème</dt>
-            <dd>Les demandes d'achat doivent être approuvées avant d'engager une dépense, avec des règles de contrôle strictes : un employé ne peut pas valider sa propre demande, et chaque approbateur a une limite de montant.</dd>
-            <dt>La solution</dt>
-            <dd>Une application transactionnelle Fiori Elements développée avec RAP sur SAP S/4HANA 2021. Les employés créent leurs demandes, les approbateurs les approuvent ou les rejettent avec un motif obligatoire, et chaque demande approuvée génère automatiquement une demande d'achat standard SAP (MM) via <code>BAPI_PR_CREATE</code>, appelée dans la phase de sauvegarde selon le pattern « managed with additional save ». Séparation des tâches, limites d'approbation, actions selon le statut et visibilité selon le rôle sont garanties côté serveur.</dd>
-            <dt>Ma contribution</dt>
-            <dd>Conception et développement complets, du modèle de données CDS jusqu'à l'interface Fiori, avec 7 tests unitaires ABAP (EML et test double SQL) qui ont permis de détecter et corriger un vrai bug d'ordre d'exécution des déterminations.</dd>
-          </dl>
-          <ul class="stack"><li>ABAP</li><li>RAP</li><li>CDS Views</li><li>DCL</li><li>OData V4</li><li>Fiori Elements</li><li>BAPI</li><li>ABAP Unit</li><li>S/4HANA MM</li><li>abapGit</li></ul>
+          <p class="highlight">Chaque demande approuvée crée automatiquement une demande d'achat standard SAP, visible dans ME53N.</p>
+          <details>
+            <summary>Problème, solution et contribution</summary>
+            <dl>
+              <dt>Le problème</dt>
+              <dd>Les demandes d'achat doivent être approuvées avant d'engager une dépense, avec des règles strictes : un employé ne peut pas valider sa propre demande, et chaque approbateur a une limite de montant.</dd>
+              <dt>La solution</dt>
+              <dd>Une application transactionnelle Fiori Elements développée avec RAP sur S/4HANA 2021. La demande d'achat MM est créée via <code>BAPI_PR_CREATE</code>, appelée dans la phase de sauvegarde selon le pattern « managed with additional save ». Séparation des tâches, limites d'approbation, actions selon le statut et visibilité selon le rôle sont garanties côté serveur.</dd>
+              <dt>Ma contribution</dt>
+              <dd>Conception et développement complets, du modèle CDS jusqu'à l'interface Fiori, avec 7 tests unitaires ABAP qui ont permis de détecter et corriger un vrai bug d'ordre d'exécution des déterminations.</dd>
+            </dl>
+          </details>
+          <ul class="stack"><li>ABAP</li><li>RAP</li><li>CDS</li><li>DCL</li><li>OData V4</li><li>Fiori Elements</li><li>BAPI</li><li>ABAP Unit</li><li>S/4HANA MM</li></ul>
+          <div class="foot"><a href="https://github.com/Zouguari/sap-rap-purchase-requisition" target="_blank" rel="noopener">Voir le code sur GitHub →</a></div>
         </div>
       </article>
 
-      <article class="project" data-eco="sap">
-        <div>
-          <span class="eco sap">SAP</span>
+      <article class="card reveal" data-eco="sap">
+        <a class="shot" href="images/vendor-spend-intelligence.webp" target="_blank" rel="noopener" aria-label="Agrandir la capture"><img src="images/vendor-spend-intelligence.webp" alt="Tableau de bord Vendor Spend Intelligence listant les fournisseurs S/4HANA avec statut de blocage et détection de doublons" loading="lazy" width="1280" height="622"><span class="zoom">Agrandir</span></a>
+        <div class="body">
+          <div class="tags"><span class="eco sap">SAP · CAP · BTP</span></div>
           <h3>Vendor Spend Intelligence</h3>
           <p class="tag">Extension SAP BTP qui fiabilise les données fournisseurs de S/4HANA Cloud grâce à l'IA.</p>
-          <div class="repo"><a href="https://github.com/Zouguari/vendor-spend-intelligence" target="_blank" rel="noopener">Voir le code sur GitHub</a></div>
-        </div>
-        <div>
-          <dl>
-            <dt>Le problème</dt>
-            <dd>Dans les grandes entreprises, les équipes achats souffrent de données fournisseurs peu fiables : des doublons créés par des conventions de nommage incohérentes, et des blocages d'achat qui passent inaperçus.</dd>
-            <dt>La solution</dt>
-            <dd>Une extension side-by-side SAP BTP développée en CAP Node.js, connectée en temps réel à un système S/4HANA Cloud via l'API standard <code>API_BUSINESS_PARTNER</code>. Un moteur de règles détecte les fournisseurs bloqués, un LLM regroupe les doublons approximatifs avec un score de confiance, et un tableau de bord au thème SAP Horizon présente les résultats. Le cœur de l'ERP reste intact.</dd>
-            <dt>Ma contribution</dt>
-            <dd>Conception et développement complets, de l'intégration S/4HANA via Communication Arrangement jusqu'au tableau de bord, avec une gestion sécurisée des identifiants par variables d'environnement.</dd>
-          </dl>
-          <ul class="stack"><li>SAP CAP</li><li>Node.js</li><li>SAP BTP</li><li>S/4HANA Cloud</li><li>OData V2/V4</li><li>SAP Cloud SDK</li><li>BAS</li><li>Groq LLM</li></ul>
+          <p class="highlight">Connectée en temps réel à un vrai système S/4HANA Cloud, pas à des données fictives.</p>
+          <details>
+            <summary>Problème, solution et contribution</summary>
+            <dl>
+              <dt>Le problème</dt>
+              <dd>Les équipes achats souffrent de données fournisseurs peu fiables : des doublons créés par des conventions de nommage incohérentes, et des blocages d'achat qui passent inaperçus.</dd>
+              <dt>La solution</dt>
+              <dd>Une extension side-by-side en CAP Node.js, connectée via l'API standard <code>API_BUSINESS_PARTNER</code>. Un moteur de règles détecte les fournisseurs bloqués, un LLM regroupe les doublons approximatifs avec un score de confiance, et un tableau de bord au thème SAP Horizon présente les résultats. Le cœur de l'ERP reste intact.</dd>
+              <dt>Ma contribution</dt>
+              <dd>Conception et développement complets, de l'intégration S/4HANA via Communication Arrangement jusqu'au tableau de bord, avec une gestion sécurisée des identifiants.</dd>
+            </dl>
+          </details>
+          <ul class="stack"><li>SAP CAP</li><li>Node.js</li><li>SAP BTP</li><li>S/4HANA Cloud</li><li>OData</li><li>SAP Cloud SDK</li><li>Groq LLM</li></ul>
+          <div class="foot"><a href="https://github.com/Zouguari/vendor-spend-intelligence" target="_blank" rel="noopener">Voir le code sur GitHub →</a></div>
         </div>
       </article>
 
-      <article class="project" data-eco="sap">
-        <div>
-          <span class="eco sap">SAP</span>
+      <article class="card reveal" data-eco="sap">
+        <a class="shot" href="images/idoc-monitoring.webp" target="_blank" rel="noopener" aria-label="Agrandir la capture"><img src="images/idoc-monitoring.webp" alt="Rapport ALV de monitoring des IDocs de commandes, avec statuts succès et erreur" loading="lazy" width="935" height="332"><span class="zoom">Agrandir</span></a>
+        <div class="body">
+          <div class="tags"><span class="eco sap">SAP · ABAP classique</span></div>
           <h3>Interface IDoc de commandes clients</h3>
-          <p class="tag">Intégration automatisée des commandes d'une boutique externe dans SAP S/4HANA, en ABAP classique.</p>
-          <div class="repo"><a href="https://github.com/Zouguari/sap-abap-idoc-sales-orders" target="_blank" rel="noopener">Voir le code sur GitHub</a></div>
-        </div>
-        <div>
-          <dl>
-            <dt>Le problème</dt>
-            <dd>Les commandes reçues d'un système externe doivent être intégrées dans SAP de façon fiable, avec un suivi des erreurs et la possibilité de corriger sans tout ressaisir.</dd>
-            <dt>La solution</dt>
-            <dd>Une interface IDoc complète : type d'IDoc et segments personnalisés, module fonction d'entrée créant les commandes clients via BAPI, journalisation dans une table dédiée, et un rapport de monitoring ALV qui permet de suivre les IDocs et de retraiter ceux en erreur en un clic. Scénarios testés : succès, erreur, correction et retraitement.</dd>
-            <dt>Ma contribution</dt>
-            <dd>Conception et développement complets, de la configuration ALE (partenaires, code de traitement) jusqu'au monitoring.</dd>
-          </dl>
+          <p class="tag">Intégration automatisée des commandes d'une boutique externe dans SAP S/4HANA.</p>
+          <p class="highlight">Un rapport de monitoring ALV permet de suivre chaque IDoc et de retraiter les erreurs en un clic.</p>
+          <details>
+            <summary>Problème, solution et contribution</summary>
+            <dl>
+              <dt>Le problème</dt>
+              <dd>Les commandes reçues d'un système externe doivent être intégrées dans SAP de façon fiable, avec un suivi des erreurs et la possibilité de corriger sans tout ressaisir.</dd>
+              <dt>La solution</dt>
+              <dd>Une interface IDoc complète : type d'IDoc et segments personnalisés, module fonction d'entrée créant les commandes clients via BAPI, journalisation dans une table dédiée et monitoring ALV avec retraitement. Scénarios testés : succès, erreur, correction et retraitement.</dd>
+              <dt>Ma contribution</dt>
+              <dd>Conception et développement complets, de la configuration ALE (partenaires, code de traitement) jusqu'au monitoring.</dd>
+            </dl>
+          </details>
           <ul class="stack"><li>ABAP</li><li>IDoc / ALE</li><li>BAPI</li><li>ALV</li><li>S/4HANA</li><li>abapGit</li></ul>
+          <div class="foot"><a href="https://github.com/Zouguari/sap-abap-idoc-sales-orders" target="_blank" rel="noopener">Voir le code sur GitHub →</a></div>
         </div>
       </article>
 
-      <article class="project" data-eco="odoo">
-        <div>
-          <span class="eco odoo">Odoo</span>
+      <article class="card reveal" data-eco="odoo">
+        <a class="shot" href="images/smarterp-ai.webp" target="_blank" rel="noopener" aria-label="Agrandir la capture"><img src="images/smarterp-ai.webp" alt="Tableau de bord SmartERP AI : score de santé de l'entreprise, anomalies critiques et actions recommandées par l'IA" loading="lazy" width="1400" height="534"><span class="zoom">Agrandir</span></a>
+        <div class="body">
+          <div class="tags"><span class="eco odoo">Odoo 17 · IA</span></div>
           <h3>SmartERP AI</h3>
           <p class="tag">Plateforme SaaS d'aide à la décision et agent IA conversationnel pour Odoo 17.</p>
-          <div class="repo"><a href="https://github.com/Zouguari/smarterp-ai" target="_blank" rel="noopener">Voir le code sur GitHub</a></div>
-        </div>
-        <div>
-          <dl>
-            <dt>Le problème</dt>
-            <dd>Les dirigeants de PME ont toutes leurs données dans Odoo (ventes, CRM, stocks, recouvrement), mais pas le temps ni les outils pour les analyser et décider vite.</dd>
-            <dt>La solution</dt>
-            <dd>Une plateforme qui synchronise en arrière-plan les données d'Odoo 17 vers une base analytique PostgreSQL, sans ralentir l'instance de production. Elle propose des KPI en temps réel, un score de santé de l'entreprise sur 100, une analyse automatique des causes racines, des recommandations générées par l'IA, des alertes configurables, des rapports par email et un agent conversationnel capable de répondre avec des chiffres réels.</dd>
-            <dt>Ma contribution</dt>
-            <dd>Projet de fin d'année en équipe de trois, en partenariat avec UrikaCloud, en tant que développeur full stack. J'ai notamment mené un audit complet de bout en bout : suppression des données simulées, correction des erreurs de mapping avec Odoo, journaux d'audit et sécurisation des actions déclenchées dans Odoo.</dd>
-          </dl>
-          <ul class="stack"><li>Odoo 17</li><li>XML-RPC</li><li>FastAPI</li><li>PostgreSQL</li><li>Next.js</li><li>TypeScript</li><li>LLaMA 3.3</li><li>Docker</li></ul>
+          <p class="highlight">Score de santé sur 100, analyse des causes racines et recommandations IA, sans jamais ralentir Odoo.</p>
+          <details>
+            <summary>Problème, solution et contribution</summary>
+            <dl>
+              <dt>Le problème</dt>
+              <dd>Les dirigeants de PME ont toutes leurs données dans Odoo (ventes, CRM, stocks, recouvrement), mais pas le temps ni les outils pour les analyser et décider vite.</dd>
+              <dt>La solution</dt>
+              <dd>Une plateforme qui synchronise en arrière-plan les données d'Odoo 17 vers une base analytique PostgreSQL. Elle propose des KPI en temps réel, un score de santé, une analyse automatique des causes racines, des recommandations IA, des alertes, des rapports par email et un agent conversationnel qui répond avec des chiffres réels.</dd>
+              <dt>Ma contribution</dt>
+              <dd>Projet de fin d'année en équipe de trois, en partenariat avec UrikaCloud, en tant que développeur full stack. J'ai notamment mené un audit complet : suppression des données simulées, correction des erreurs de mapping, journaux d'audit et sécurisation des actions déclenchées dans Odoo.</dd>
+            </dl>
+          </details>
+          <ul class="stack"><li>Odoo 17</li><li>XML-RPC</li><li>FastAPI</li><li>PostgreSQL</li><li>Next.js</li><li>LLaMA 3.3</li><li>Docker</li></ul>
+          <div class="foot"><a href="https://github.com/Zouguari/smarterp-ai" target="_blank" rel="noopener">Voir le code sur GitHub →</a></div>
         </div>
       </article>
 
-      <article class="project" data-eco="odoo">
-        <div>
-          <span class="eco odoo">Odoo</span>
+      <article class="card reveal" data-eco="odoo">
+        <a class="shot" href="images/smart-hr-ai.webp" target="_blank" rel="noopener" aria-label="Agrandir la capture"><img src="images/smart-hr-ai.webp" alt="Menu Smart HR AI dans Odoo : tableau de bord IA, congés, présences, compétences et évaluations" loading="lazy" width="1400" height="459"><span class="zoom">Agrandir</span></a>
+        <div class="body">
+          <div class="tags"><span class="eco odoo">Odoo 17 · IA · Mobile</span></div>
           <h3>Smart HR AI</h3>
           <p class="tag">RH automatisée sur Odoo 17, du recrutement à l'évaluation, avec IA et application mobile.</p>
-          <div class="repo"><a href="https://github.com/Zouguari/Rh_automatise-odoo" target="_blank" rel="noopener">Voir le code sur GitHub</a></div>
-        </div>
-        <div>
-          <dl>
-            <dt>Le problème</dt>
-            <dd>Tri des CV, matching poste/candidat, suivi des congés, des présences et des évaluations restent souvent manuels, et les collaborateurs n'ont aucune visibilité sur leurs propres données RH.</dd>
-            <dt>La solution</dt>
-            <dd>Six modules Odoo custom qui automatisent le recrutement (extraction de CV avec OCR, scoring IA, embauche avec création de l'employé, du contrat et de l'onboarding), les compétences, les congés, les présences et les évaluations. Une API REST sécurisée par JWT, avec des droits par rôle, alimente une application mobile où chaque employé consulte son profil, ses congés et ses évaluations.</dd>
-            <dt>Ma contribution</dt>
-            <dd>Projet réalisé en équipe de trois pendant mon stage chez UrikaCloud.</dd>
-          </dl>
-          <ul class="stack"><li>Odoo 17</li><li>Python</li><li>PostgreSQL</li><li>Google Gemini</li><li>OCR</li><li>REST / JWT</li><li>React Native</li><li>Docker</li></ul>
+          <p class="highlight">Des modules Odoo custom, du tri des CV par IA jusqu'à l'onboarding automatique.</p>
+          <details>
+            <summary>Problème, solution et contribution</summary>
+            <dl>
+              <dt>Le problème</dt>
+              <dd>Tri des CV, suivi des congés, des présences et des évaluations restent souvent manuels, et les collaborateurs n'ont aucune visibilité sur leurs propres données RH.</dd>
+              <dt>La solution</dt>
+              <dd>Des modules qui automatisent le recrutement (extraction de CV, scoring IA, embauche avec création de l'employé, du contrat et de l'onboarding), les compétences, les congés, les présences et les évaluations. Une API REST sécurisée par JWT alimente une application mobile pour les employés.</dd>
+              <dt>Ma contribution</dt>
+              <dd>Projet réalisé en équipe de trois pendant mon stage chez UrikaCloud.</dd>
+            </dl>
+          </details>
+          <ul class="stack"><li>Odoo 17</li><li>Python</li><li>Google Gemini</li><li>OCR</li><li>REST / JWT</li><li>React Native</li></ul>
+          <div class="foot"><a href="https://github.com/Zouguari/Rh_automatise-odoo" target="_blank" rel="noopener">Voir le code sur GitHub →</a></div>
         </div>
       </article>
 
-      <article class="project" data-eco="odoo">
-        <div>
-          <span class="eco odoo">Odoo</span>
+      <article class="card reveal" data-eco="odoo">
+        <a class="shot" href="images/ensiasd-erp.webp" target="_blank" rel="noopener" aria-label="Agrandir la capture"><img src="images/ensiasd-erp.webp" alt="Les modules ENSIASD installés dans Odoo : étudiants, académique, notes, emploi du temps, absences et stages" loading="lazy" width="780" height="439"><span class="zoom">Agrandir</span></a>
+        <div class="body">
+          <div class="tags"><span class="eco odoo">Odoo 17 · Django</span></div>
           <h3>ENSIASD ERP</h3>
           <p class="tag">Système de gestion académique sur Odoo 17, avec un portail web pour les étudiants.</p>
-          <div class="repo">
-            <a href="https://github.com/Zouguari/ENSIASD-ERP---Syst-me-de-Gestion-Int-gr-" target="_blank" rel="noopener">Code de l'ERP sur GitHub</a>
-            <a href="https://github.com/Zouguari/WEBEDUapplicationERP" target="_blank" rel="noopener">Code du portail Django sur GitHub</a>
-          </div>
-        </div>
-        <div>
-          <dl>
-            <dt>Le problème</dt>
-            <dd>La gestion d'une école repose souvent sur des outils dispersés, et les étudiants n'ont pas d'accès direct à leurs notes et informations.</dd>
-            <dt>La solution</dt>
-            <dd>Huit modules Odoo custom organisés selon une architecture de dépendances claire : étudiants, programmes, notes et moyennes, absences, stages, emplois du temps avec détection des conflits et export PDF/Excel, et rapports analytiques. Une application web Django connectée à l'API d'Odoo permet aux étudiants de consulter leurs notes.</dd>
-            <dt>Ma contribution</dt>
-            <dd>Projet académique réalisé en équipe.</dd>
-          </dl>
+          <p class="highlight">Des modules Odoo pour toute la vie de l'école, et un portail Django pour que les étudiants consultent leurs notes.</p>
+          <details>
+            <summary>Problème, solution et contribution</summary>
+            <dl>
+              <dt>Le problème</dt>
+              <dd>La gestion d'une école repose souvent sur des outils dispersés, et les étudiants n'ont pas d'accès direct à leurs notes et informations.</dd>
+              <dt>La solution</dt>
+              <dd>Des modules Odoo custom organisés selon une architecture de dépendances claire : étudiants, programmes, notes et moyennes, absences, stages, emplois du temps avec détection des conflits et export PDF/Excel. Une application Django connectée à l'API d'Odoo sert de portail étudiant.</dd>
+              <dt>Ma contribution</dt>
+              <dd>Projet académique réalisé en équipe.</dd>
+            </dl>
+          </details>
           <ul class="stack"><li>Odoo 17</li><li>Python</li><li>PostgreSQL</li><li>Django</li><li>API Odoo</li></ul>
+          <div class="foot">
+            <a href="https://github.com/Zouguari/ENSIASD-ERP---Syst-me-de-Gestion-Int-gr-" target="_blank" rel="noopener">Code de l'ERP →</a>
+            <a href="https://github.com/Zouguari/WEBEDUapplicationERP" target="_blank" rel="noopener">Code du portail →</a>
+          </div>
         </div>
       </article>
 
@@ -459,9 +524,9 @@ footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);
 
 <section class="block" id="experiences">
   <div class="wrap">
-    <div class="head"><div><h2>Expériences</h2></div></div>
+    <div class="head"><div><span class="kicker">Parcours</span><h2>Expériences</h2></div></div>
     <ol class="timeline">
-      <li>
+      <li class="reveal">
         <h3>Stagiaire Développeur ERP &amp; IA</h3>
         <div class="when"><span class="org">UrikaCloud</span>, Meknès, Maroc. Mai à août 2026 (3 mois)</div>
         <p class="sum">Intégration de l'intelligence artificielle à l'ERP Odoo 17 au sein d'une équipe de trois développeurs.</p>
@@ -472,7 +537,7 @@ footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);
         </ul>
         <ul class="stack"><li>Odoo 17</li><li>Python</li><li>FastAPI</li><li>Next.js</li><li>React Native</li><li>LLM</li><li>Docker</li></ul>
       </li>
-      <li class="lead-role">
+      <li class="lead-role reveal">
         <h3>Chef de projet global (CTO)</h3>
         <div class="when"><span class="org">MarocArtisan</span>, projet académique, ENSIASD Taroudant. 2025</div>
         <p class="sum">Coordination de 55 étudiants répartis en 10 équipes et 5 départements pour concevoir de A à Z une marketplace dédiée à l'artisanat marocain.</p>
@@ -482,9 +547,9 @@ footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);
           <li>Organisation du travail comme une équipe professionnelle : Trello, GitHub, Slack, daily stand-ups et revues de code.</li>
         </ul>
         <ul class="stack"><li>Oracle</li><li>PL/SQL</li><li>Flask</li><li>UML</li><li>Trello</li><li>GitHub</li></ul>
-        <p style="margin-top:12px;font-size:.95rem"><a href="https://github.com/marocartisan-ensiasd-2025/marocartisan" target="_blank" rel="noopener">Voir le projet sur GitHub</a></p>
+        <p style="margin-top:12px;font-size:.95rem"><a href="https://github.com/marocartisan-ensiasd-2025/marocartisan" target="_blank" rel="noopener">Voir le projet sur GitHub →</a></p>
       </li>
-      <li>
+      <li class="reveal">
         <h3>Stagiaire Développeur</h3>
         <div class="when"><span class="org">LafargeHolcim</span></div>
         <p class="sum">Développement d'un système de gestion des présences par reconnaissance faciale.</p>
@@ -494,7 +559,7 @@ footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);
         </ul>
         <ul class="stack"><li>Python</li><li>OpenCV</li><li>MySQL</li><li>Streamlit</li></ul>
       </li>
-      <li>
+      <li class="reveal">
         <h3>Stagiaire Développeur Web</h3>
         <div class="when"><span class="org">Med You In</span>. Juin à juillet 2023 (2 mois)</div>
         <p class="sum">Développement d'un site de location de voitures : réservations en ligne, catalogue de véhicules, gestion des clients et administrateurs, authentification et CRUD selon l'architecture MVC.</p>
@@ -506,15 +571,15 @@ footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);
 
 <section class="block" id="competences">
   <div class="wrap">
-    <div class="head"><div><h2>Compétences</h2><p>Uniquement des compétences que j'ai mises en pratique dans les projets et expériences ci-dessus.</p></div></div>
+    <div class="head"><div><span class="kicker">Savoir-faire</span><h2>Compétences</h2><p>Uniquement des compétences mises en pratique dans les projets et expériences ci-dessus.</p></div></div>
     <div class="skills">
       <div class="skill sap wide"><h3>SAP</h3><ul class="stack"><li>ABAP classique</li><li>ABAP Cloud</li><li>RAP</li><li>CDS Views</li><li>DCL</li><li>IDoc / ALE</li><li>BAPI</li><li>ALV</li><li>ABAP Unit</li><li>SAP CAP (Node.js)</li><li>SAP BTP</li><li>S/4HANA (MM)</li><li>OData V2/V4</li><li>Fiori Elements</li><li>Eclipse ADT</li><li>Business Application Studio</li><li>abapGit</li></ul></div>
-      <div class="skill odoo"><h3>Odoo</h3><ul class="stack"><li>Modules custom</li><li>ORM, vues, sécurité</li><li>Paramétrage fonctionnel</li><li>XML-RPC</li><li>API REST / JWT</li><li>RH, Ventes, CRM, Stocks</li></ul></div>
+      <div class="skill odoo"><h3>Odoo</h3><ul class="stack"><li>Odoo 17 &amp; 18</li><li>Modules custom</li><li>ORM, vues, sécurité</li><li>OWL</li><li>Rapports QWeb</li><li>Paramétrage fonctionnel</li><li>Achats, Stock, Ventes, Facturation</li><li>RH, CRM</li><li>XML-RPC</li><li>API REST / JWT</li><li>Modules OCA</li></ul></div>
       <div class="skill"><h3>Intelligence artificielle</h3><ul class="stack"><li>Intégration de LLM</li><li>Groq / LLaMA 3.3</li><li>Google Gemini</li><li>OCR</li><li>OpenCV</li></ul></div>
       <div class="skill"><h3>Développement</h3><ul class="stack"><li>Python</li><li>FastAPI</li><li>Django</li><li>Flask</li><li>Java SE 17</li><li>JavaScript</li><li>TypeScript</li><li>Next.js</li><li>React Native</li><li>Laravel</li></ul></div>
       <div class="skill"><h3>Bases de données</h3><ul class="stack"><li>PostgreSQL</li><li>Oracle PL/SQL</li><li>MySQL</li><li>SQLAlchemy</li></ul></div>
       <div class="skill"><h3>DevOps et outils</h3><ul class="stack"><li>Docker</li><li>Git / GitHub</li><li>Trello</li><li>Slack</li><li>UML</li></ul></div>
-      <div class="skill"><h3>Méthodes</h3><ul class="stack"><li>Gestion de projet agile</li><li>Coordination d'équipes</li><li>Analyse des besoins métier</li><li>Revues de code</li><li>Tests unitaires</li></ul></div>
+      <div class="skill"><h3>Méthodes</h3><ul class="stack"><li>Gestion de projet agile</li><li>Coordination d'équipes</li><li>Analyse des besoins métier</li><li>Recette et tests</li><li>Documentation utilisateur</li></ul></div>
       <div class="skill wide"><h3>Langues</h3><ul class="stack"><li>Français (TCF B2)</li><li>Anglais (courant)</li></ul></div>
     </div>
   </div>
@@ -522,32 +587,32 @@ footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);
 
 <section class="block" id="certifications">
   <div class="wrap">
-    <div class="head"><div><h2>Certifications</h2></div></div>
+    <div class="head"><div><span class="kicker">Vérifiables en un clic</span><h2>Certifications</h2></div></div>
     <div class="certs">
-      <a class="cert sap" href="https://www.credly.com/earner/earned/badge/31cdc2c5-0920-401b-b627-504b15beedc8" target="_blank" rel="noopener">
+      <a class="cert sap reveal" href="https://www.credly.com/earner/earned/badge/31cdc2c5-0920-401b-b627-504b15beedc8" target="_blank" rel="noopener">
         <div class="issuer">SAP</div>
         <h3>SAP Certified Associate, Back-End Developer, ABAP Cloud</h3>
         <p>C_ABAPD_2601</p>
-        <span class="verify">Vérifier sur Credly</span>
+        <span class="verify">Vérifier sur Credly →</span>
       </a>
-      <a class="cert sap" href="https://www.credly.com/earner/earned/badge/4bab003b-e9b4-4c64-8c0c-d9b78fbc531c" target="_blank" rel="noopener">
+      <a class="cert sap reveal" href="https://www.credly.com/earner/earned/badge/4bab003b-e9b4-4c64-8c0c-d9b78fbc531c" target="_blank" rel="noopener">
         <div class="issuer">SAP</div>
         <h3>SAP Certified Backend Developer, SAP Cloud Application Programming Model</h3>
         <p>C_CPE. Examen pratique : développement d'un système de gestion logistique en CAP Node.js.</p>
-        <span class="verify">Vérifier sur Credly</span>
+        <span class="verify">Vérifier sur Credly →</span>
       </a>
-      <a class="cert other" href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=B83791B2AC31E947924EA51F0BB8AF1C8385662DD7CC0E2768E5AE9ABD579BE9" target="_blank" rel="noopener">
+      <a class="cert other reveal" href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=B83791B2AC31E947924EA51F0BB8AF1C8385662DD7CC0E2768E5AE9ABD579BE9" target="_blank" rel="noopener">
         <div class="issuer">Oracle</div>
         <h3>Oracle Certified Professional: Java SE 17 Developer</h3>
         <p>1Z0-829</p>
-        <span class="verify">Vérifier sur Oracle CertView</span>
+        <span class="verify">Vérifier sur Oracle CertView →</span>
       </a>
-      <article class="cert other">
+      <article class="cert other reveal">
         <div class="issuer">Simplilearn</div>
         <h3>Programming with Python 3.X</h3>
         <p>2026</p>
       </article>
-      <article class="cert other">
+      <article class="cert other reveal">
         <div class="issuer">France Éducation international</div>
         <h3>TCF, Test de connaissance du français</h3>
         <p>Niveau B2</p>
@@ -558,14 +623,14 @@ footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);
 
 <section class="block" id="formation">
   <div class="wrap">
-    <div class="head"><div><h2>Formation</h2></div></div>
+    <div class="head"><div><span class="kicker">Études</span><h2>Formation</h2></div></div>
     <div class="edu">
-      <article>
+      <article class="reveal">
         <h3>Cycle ingénieur, Management et Gouvernance des Systèmes d'Information</h3>
         <div class="when">ENSIASD Taroudant, Université Ibn Zohr. 2024 à 2027</div>
         <p>Actuellement en 5e année. Stage de fin d'études de 6 mois recherché à partir de janvier 2027.</p>
       </article>
-      <article>
+      <article class="reveal">
         <h3>DUT Génie Informatique</h3>
         <div class="when">EST Meknès. 2022 à 2024</div>
       </article>
@@ -577,14 +642,17 @@ footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);
 
 <section class="contact" id="contact">
   <div class="wrap">
-    <h2>Vous recherchez un stagiaire PFE en développement ERP SAP ou Odoo ?</h2>
-    <p>Je suis disponible à partir de janvier 2027 pour un stage de 6 mois, et je serais ravi d'échanger avec vous.</p>
-    <div class="channels">
-      <a class="mail" href="mailto:yassine.zouguari.123@gmail.com">yassine.zouguari.123@gmail.com</a>
-      <a href="https://www.linkedin.com/in/yassine-zouguari-b3319a2b2/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/Zouguari" target="_blank" rel="noopener">GitHub</a>
+    <div class="avatar"><img src="images/yassine-zouguari.webp" alt="" loading="lazy"></div>
+    <div>
+      <h2>Vous recherchez un stagiaire PFE en développement ERP SAP ou Odoo ?</h2>
+      <p>Je suis disponible à partir de janvier 2027 pour un stage de 6 mois, et je serais ravi d'échanger avec vous.</p>
+      <div class="channels">
+        <a class="mail" href="mailto:yassine.zouguari.123@gmail.com">yassine.zouguari.123@gmail.com</a>
+        <a href="https://www.linkedin.com/in/yassine-zouguari-b3319a2b2/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Zouguari" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p style="font-size:.98rem;margin:0">Basé au Maroc, ouvert à la mobilité internationale.</p>
     </div>
-    <p style="font-size:.98rem">Basé au Maroc, ouvert à la mobilité internationale.</p>
   </div>
 </section>
 <footer><div class="wrap">© 2026 Yassine Zouguari</div></footer>
@@ -607,15 +675,28 @@ footer{background:var(--ink);color:color-mix(in srgb,var(--bg) 60%,transparent);
     label();
   });
 
-  var buttons=document.querySelectorAll('.filter button'), projects=document.querySelectorAll('.project');
+  var buttons=document.querySelectorAll('.filter button'), cards=document.querySelectorAll('.card');
   buttons.forEach(function(b){
     b.addEventListener('click',function(){
       var f=b.getAttribute('data-f');
       buttons.forEach(function(x){x.setAttribute('aria-pressed',String(x===b));});
-      projects.forEach(function(p){p.hidden=!(f==='all'||p.getAttribute('data-eco')===f);});
+      cards.forEach(function(c){c.hidden=!(f==='all'||c.getAttribute('data-eco')===f); c.classList.add('in');});
       document.body.setAttribute('data-eco',f);
     });
   });
+
+  var items=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(el){io.observe(el);});
+  } else items.forEach(function(el){el.classList.add('in');});
+
+  var links=document.querySelectorAll('.nav a'), secs=[].map.call(links,function(a){return document.querySelector(a.getAttribute('href'));});
+  window.addEventListener('scroll',function(){
+    var y=window.scrollY+120, idx=-1;
+    secs.forEach(function(s,i){if(s && s.offsetTop<=y) idx=i;});
+    links.forEach(function(a,i){a.classList.toggle('on',i===idx);});
+  },{passive:true});
 })();
 </script>
 </body>
